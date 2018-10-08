@@ -1,6 +1,6 @@
 version: 2
 jobs:
-   one:
+  one:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
@@ -14,13 +14,9 @@ jobs:
       - checkout
       - run: echo "A more familiar hi"
       - run: sleep 15
-      - run:
-          name: Print the Current Time
-          command: date
 workflows:
   version: 2
   one_and_two:
     jobs:
       - one
       - two
-      
